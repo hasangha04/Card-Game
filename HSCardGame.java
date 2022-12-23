@@ -1,11 +1,29 @@
+import java.util.Scanner;
+
 // Card shuffling and dealing
 
 public class HSCardGame
 {
 	public static void main(String[] args)
 	{
-	    introduction();
+		char ans;
+		String answer;
+		Scanner input = new Scanner(System.in);
+
+		introduction();
 		TwentyOne.playGame();
+
+		System.out.println("Would you like to play again: ");
+		answer = input.nextLine().toUpperCase();
+		ans = answer.charAt(0);
+		
+		while (ans == 'Y')
+		{
+			TwentyOne.playGame();
+			System.out.println("Would you like to play again: ");
+			answer = input.nextLine().toUpperCase();
+			ans = answer.charAt(0);
+		}
 		
 	}
 	private static void introduction() 

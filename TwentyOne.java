@@ -36,7 +36,8 @@ public class TwentyOne
 			System.out.println("You lost the game");
 			System.out.println("Your total was greater than 21");
 			System.out.println("Try again thanks for playing");
-			System.exit(0);
+			System.out.println();
+			return;
 		}
 
 		System.out.print("Would you like to get another card (hit) ");
@@ -45,7 +46,7 @@ public class TwentyOne
 		String answer = input.nextLine().toUpperCase();
 		char ans = answer.charAt(0);
 
-		while (ans == 'Y')
+		while (ans == 'Y' || ans == 'H')
 		{
 			player.push(myDeckOfCards.dealCard());
 			System.out.print("Your new card is: ");
@@ -60,7 +61,8 @@ public class TwentyOne
 				System.out.println("You lost the game");
 				System.out.println("Your total was greater than 21");
 				System.out.println("Try again thanks for playing");
-				System.exit(0);
+				System.out.println();
+				return;
 			}
 
 			System.out.println("Would you like to hit: ");
@@ -82,19 +84,22 @@ public class TwentyOne
 
 			dealTotal += dealerNew;
 			System.out.println("New Dealer Total: " + dealTotal);
+			System.out.println();
 			if (dealTotal > 21)
 			{
 				System.out.println("You win the game");
 				System.out.println("Dealer total was greater than 21");
 				System.out.println("Thanks for playing");
-				System.exit(0);
+				System.out.println();
+				return;
 			}
 			else if (dealTotal == 21)
 			{
 				System.out.println("You lost the game");
 				System.out.println("Dealer total was 21");
 				System.out.println("Try again thanks for playing");
-				System.exit(0);
+				System.out.println();
+				return;
 			}
 			if (dealTotal > 16)
 			{
@@ -107,14 +112,16 @@ public class TwentyOne
 			System.out.println("You win the game");
 			System.out.println("Your total was closer to 21");
 			System.out.println("Thanks for playing");
-			System.exit(0);
+			System.out.println();
+			return;
 		}
 		else 
 		{
 			System.out.println("You lost the game");
 			System.out.println("Dealer total was closer to 21");
 			System.out.println("Try again thanks for playing");
-			System.exit(0);
+			System.out.println();
+			return;
 		}
 	} 
 }
