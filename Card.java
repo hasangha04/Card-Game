@@ -6,9 +6,9 @@ public class Card
 	// two-argument constructor initializes card's face and suit
 	public Card(int cardFace, String cardSuit)
 	{
-			this.face = cardFace; // initialize face of card
-			this.suit = cardSuit; // initialize suit of card
-	} // end of Card Constructor
+		this.face = cardFace; // initialize face of card
+		this.suit = cardSuit; // initialize suit of card
+	} 
 	
 	public int getface()
 	{
@@ -19,5 +19,5 @@ public class Card
 	public String toString()
 	{
 		return face + " of " + suit;
-	} // end of to String method 
-} // end class Card
+	} 
+} 
